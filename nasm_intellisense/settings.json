@@ -1,0 +1,111 @@
+{
+    "background.enabled": true,
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe",
+    "editor.minimap.enabled": false,
+    "roo-cline.allowedCommands": [
+        "npm test",
+        "npm install",
+        "tsc",
+        "git log",
+        "git diff",
+        "git show"
+    ],
+   "editor.tokenColorCustomizations": {
+  "textMateRules": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#6eff86",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "meta.preprocessor.numeric",
+      "settings": {
+        "foreground": "#eeb7ff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "meta.preprocessor.numeric1",
+      "settings": {
+        "foreground": "#eeb7ff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "support.type.property-name",
+      "settings": {
+        "foreground": "#2ea1ff"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "scope": "support.type",
+      "settings": {
+        "foreground": "#7dedfc",
+        "fontStyle": "bold"
+      }
+    },
+   
+    {
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#b9ffb6",
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#ae8bff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "meta.object-literal.key",
+      "settings": {
+        "foreground": "#afff76"
+      }
+    },
+    {
+      "scope": "meta.preprocessor.string",
+      "settings": {
+        "foreground": "#ff9737"
+      }
+    },
+    {
+      "scope": "support.function.external.asm",
+      "settings": {
+        "foreground": "#61c7d4",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "entity.name.function.asm",
+      "settings": {
+        "foreground": "#5fb7ff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#ffceca",
+        "fontStyle": "bold"
+      }
+    }
+  ]
+}
+
+
+,
+    "debug.disassemblyView.showSourceCode": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.overtypeCursorStyle": "underline"
+}

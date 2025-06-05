@@ -1,6 +1,5 @@
 bits 64
 default rel
-
 section .data 
     print_msg db "Enter arr length N = ",0x0
     format_int db "%d",0x0
@@ -34,7 +33,6 @@ malloc_array:
     xor ebx,ebx
 input_int:
     cmp bl,byte[N]
-    jge print_int
     lea rcx,[format_int]
     lea rsi,[test_array_dynamic]
     lea rdx,[rsi+rbx*4]
