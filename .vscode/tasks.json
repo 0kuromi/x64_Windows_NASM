@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "windows": {
+    "options": {
+      "shell": {
+        "executable": "cmd.exe",
+        "args": ["/d", "/c"]
+      }
+    }
+  },
+  "tasks": [
+    {
+      "label": "1. Assemble ASM to OBJ",
+      "type": "shell",
+      "command": "nasm -f win64 -gcv8 \"${file}\" -o \"${workspaceFolder}\\p2R.obj\" -l \"${workspaceFolder}\\p2R.lst\"",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "2. Link OBJ to EXE",
+      "type": "shell",
+      "command": "vcvars64 && cl.exe /DEBUG /Zi /Od strlen.obj \"${workspaceFolder}\\p2R.obj\" /link /SUBSYSTEM:console /OUT:\"${workspaceFolder}\\p2R.exe\"  /libpath:\"E:\\Microsoft Visual Studio\\2022\\Preview\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x64\" kernel32.lib legacy_stdio_definitions.lib msvcrt.lib /MACHINE:X64 /LARGEADDRESSAWARE:NO",
+      "problemMatcher": [],
+      "dependsOn": ["1. Assemble ASM to OBJ"],
+      "presentation": {
+        "reveal": "always"
+      }
+    },
+    {
+      "label": "build all",
+      "dependsOn": [
+        "1. Assemble ASM to OBJ",
+        "2. Link OBJ to EXE"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
